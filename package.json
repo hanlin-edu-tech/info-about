@@ -1,0 +1,47 @@
+{
+  "name": "info-about",
+  "description": "info-about",
+  "author": "hotdog929 <hotdog929@gmail.com>",
+  "version": "0.0.1",
+  "defaultBranch": "test",
+  "branch": {
+    "test": {
+      "platformUrl": "https://www.ehanlin.com.tw",
+      "s3Path": "https://s3-ap-northeast-1.amazonaws.com/ehanlin-web-resource",
+      "bucket": "tutor-info-test",
+      "webcomponentVersion": "current.SNAPSHOT"
+    },
+    "master": {
+      "platformUrl": "https://www.ehanlin.com.tw",
+      "s3Path": "https://s3-ap-northeast-1.amazonaws.com/ehanlin-web-resource",
+      "bucket": "tutor-info",
+      "webcomponentVersion": "current"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hanlin-edu-tech/info-about.git"
+  },
+  "devDependencies": {
+    "jquery": "3.3.1",
+    "gulp": "3.9.1",
+    "gulp-param": "1.0.3",
+    "gulp-rename": "1.4.0",
+    "gulp-template-util": "0.0.2",
+    "event-stream": "3.3.4",
+    "del": "2.2.2",
+    "q": "1.5.0",
+    "path": "0.12.7",
+    "browserify": "16.2.3",
+    "coffeeify": "2.1.0",
+    "less": "3.9.0",
+    "pug": "2.0.3",
+    "@google-cloud/storage": "2.4.3"
+  },
+  "dependencies": {
+    "ehanlin-basicss": "0.0.5"
+  },
+  "scripts": {
+    "test": "gulp package --branch $TRAVIS_BRANCH"
+  }
+}

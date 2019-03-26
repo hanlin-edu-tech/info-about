@@ -1,0 +1,11 @@
+logs
+*.log
+npm-debug.log*
+node_modules
+.npm
+.node_repl_history
+src/*/js
+src/*/css
+src/**/*.html
+src/*/lib
+dist
