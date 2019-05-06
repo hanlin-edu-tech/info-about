@@ -2,19 +2,19 @@
   "name": "info-about",
   "description": "info-about",
   "author": "hotdog929 <hotdog929@gmail.com>",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "defaultBranch": "test",
   "branch": {
     "test": {
       "platformUrl": "https://www.ehanlin.com.tw",
       "s3Path": "https://s3-ap-northeast-1.amazonaws.com/ehanlin-web-resource",
-      "bucket": "tutor-info-test",
+      "bucket": "tutor-infos-test",
       "webcomponentVersion": "current.SNAPSHOT"
     },
     "master": {
       "platformUrl": "https://www.ehanlin.com.tw",
       "s3Path": "https://s3-ap-northeast-1.amazonaws.com/ehanlin-web-resource",
-      "bucket": "tutor-info",
+      "bucket": "tutor-infos",
       "webcomponentVersion": "current"
     }
   },

@@ -19,7 +19,7 @@ var pug = require('pug');
 var Storage = require('@google-cloud/storage').Storage;
 var storage = new Storage();
 
-var distPath = 'dist/info/about';
+var distPath = 'dist/infos/about';
 
 function updateBranchVers(branch){
     branchVers = packageJson.branch[branch];
