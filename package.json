@@ -35,7 +35,7 @@
     "browserify": "16.2.3",
     "coffeeify": "2.1.0",
     "less": "3.9.0",
-    "pug": "2.0.3",
+    "pug": "3.0.1",
     "@google-cloud/storage": "2.4.3"
   },
   "dependencies": {
