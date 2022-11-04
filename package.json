@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "jquery": "3.3.1",
-    "gulp": "3.9.1",
+    "gulp": "4.0.2",
     "gulp-param": "1.0.3",
     "gulp-rename": "1.4.0",
     "gulp-template-util": "0.0.2",
