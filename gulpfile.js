@@ -90,7 +90,8 @@ function uploadGCS(bucket, metadata){
                 resumable: true
             };
             if(file.relative.substr(file.relative.length-5, 5).toLowerCase() == ".html"){
-                options.metadata = {cacheControl: 'public, max-age=3600'};
+                //options.metadata = {cacheControl: 'public, max-age=3600'};
+                options.metadata = {cacheControl: 'no-store'};
             }
             storage.bucket(bucket).upload(file.path, options, function(error){
                 if(error != null){

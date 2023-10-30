@@ -5,53 +5,56 @@ html(lang="zh-tw")
         title 師長推薦
         link(rel="stylesheet" type="text/css" href=`./${version}/css/recommend.css`)
         include ./head.pug
-    body.basic
-        include ./html-head.pug
-        #container
-            ul.menu
-                li
-                    a(href='index.html')
-                        i
-                        | 學院介紹
-                li
-                    a.select(href='#') 師長推薦
-            .box.right
-                .box-title
-                    .tag.blue
-                        p Recommendation
-                    .content 佛光山均頭國民中小學 校長 馬惠娣
-                .box-body.container
-                    img.people(src=`./${version}/img/recommend_1.jpg`)
-                    h3 有了翰林雲端，學生學習得心應手，要補救或充實任憑選擇！
-                    .people-says
-                        p
-                            | 均頭國民中小學是一所住宿型學校，學生週一至週五學習滿滿，我們希望學生在返家期間能夠複習或檢視學習狀況，讓家長瞭解孩子的程度，即時補救或給予讚賞，激勵孩子主動學習及向上提升。
-                        p 因緣際會翰林得知我們有線上學習的想法，立即與學校聯繫，進行雲端學習解說，得到認同後，則著手合作事宜。
-                        p
-                            | 雲端學院儲存了記憶、理解、應用、分析、綜合、評鑑等層次的題目，學生自主學習或做教師派卷的測驗，依其結果分析，可就動畫學習或影音教學，反覆練習。教師可透過系統，知道任教班級及個別學生的學習狀況，給予回饋或個別教學。家長則可隨時進入系統觀察孩子的學習動向，適時給予鼓勵與支持。
-            .box.right
-                .box-title
-                    .tag.blue
-                        p Recommendation
-                    .content 國立新竹教育大學 教育學系 助理教授 邱富源
-                .box-body.container
-                    img.people(src=`./${version}/img/recommend_2.jpg`)
-                    h3 診斷式評量為孩子的學習做迅速有效的標靶治療
-                    .people-says
-                        p
-                            | 孩子的學習的路程中，難免遇到瓶頸，日積月累將可能變成一道永遠的學習阻礙，翰林雲端學院的設計主要師法醫者治病的概念，經由每回測驗的歷程，診斷出各個未釐清的知識點，並施予錯題解析及影片補救，當每個未釐清的知識點陸續迎刃而解後，孩子所獲得的成就感與自信心將轉化成無比的學習動力，屢創個人佳績，邁向頂尖學府。
-            .box.right
-                .box-title
-                    .tag.blue
-                        p Recommendation
-                    .content 臺北市立教育大學音樂學系教授（前人文藝術學院院長） 林公欽
-                .box-body.container
-                    img.people(src=`./${version}/img/recommend_3.jpg`)
-                    h3 遨遊於「雲端」
-                    .people-says
-                        p 「雲端」學院實踐學生由「學習」、「測驗」、「診斷」與「補救」所構成之有效學習循環。
-                        p 「雲端」學院實現教師化繁為簡的教學工作，體現以個別學生為中心之教學方法。
-                        p 「雲端」學院結合了優質的知識内容與先進的技術，提供豐富且便利之學習工具。
-                        p 「雲端」學院超越學習、空間與時間的限制，讓我們遨遊於「翰林雲端學院」!
+    body
+        eh-navbar
+        div.basic(style='margin-top: 60px; background: none;')
+            #container
+                ul.menu
+                    li
+                        a(href='index.html')
+                            i
+                            | 學院介紹
+                    li
+                        a.select(href='#') 師長推薦
+                .box.right
+                    .box-title
+                        .tag.blue
+                            p Recommendation
+                        .content 佛光山均頭國民中小學 校長 馬惠娣
+                    .box-body.container
+                        img.people(src=`./${version}/img/recommend_1.jpg`)
+                        h3 有了翰林雲端，學生學習得心應手，要補救或充實任憑選擇！
+                        .people-says
+                            p
+                                | 均頭國民中小學是一所住宿型學校，學生週一至週五學習滿滿，我們希望學生在返家期間能夠複習或檢視學習狀況，讓家長瞭解孩子的程度，即時補救或給予讚賞，激勵孩子主動學習及向上提升。
+                            p 因緣際會翰林得知我們有線上學習的想法，立即與學校聯繫，進行雲端學習解說，得到認同後，則著手合作事宜。
+                            p
+                                | 雲端學院儲存了記憶、理解、應用、分析、綜合、評鑑等層次的題目，學生自主學習或做教師派卷的測驗，依其結果分析，可就動畫學習或影音教學，反覆練習。教師可透過系統，知道任教班級及個別學生的學習狀況，給予回饋或個別教學。家長則可隨時進入系統觀察孩子的學習動向，適時給予鼓勵與支持。
+                .box.right
+                    .box-title
+                        .tag.blue
+                            p Recommendation
+                        .content 國立新竹教育大學 教育學系 助理教授 邱富源
+                    .box-body.container
+                        img.people(src=`./${version}/img/recommend_2.jpg`)
+                        h3 診斷式評量為孩子的學習做迅速有效的標靶治療
+                        .people-says
+                            p
+                                | 孩子的學習的路程中，難免遇到瓶頸，日積月累將可能變成一道永遠的學習阻礙，翰林雲端學院的設計主要師法醫者治病的概念，經由每回測驗的歷程，診斷出各個未釐清的知識點，並施予錯題解析及影片補救，當每個未釐清的知識點陸續迎刃而解後，孩子所獲得的成就感與自信心將轉化成無比的學習動力，屢創個人佳績，邁向頂尖學府。
+                .box.right
+                    .box-title
+                        .tag.blue
+                            p Recommendation
+                        .content 臺北市立教育大學音樂學系教授（前人文藝術學院院長） 林公欽
+                    .box-body.container
+                        img.people(src=`./${version}/img/recommend_3.jpg`)
+                        h3 遨遊於「雲端」
+                        .people-says
+                            p 「雲端」學院實踐學生由「學習」、「測驗」、「診斷」與「補救」所構成之有效學習循環。
+                            p 「雲端」學院實現教師化繁為簡的教學工作，體現以個別學生為中心之教學方法。
+                            p 「雲端」學院結合了優質的知識内容與先進的技術，提供豐富且便利之學習工具。
+                            p 「雲端」學院超越學習、空間與時間的限制，讓我們遨遊於「翰林雲端學院」!
 
-        include ./html-footer.pug
+        eh-footer
+        script(src="../platform-wc/eh-navbar/dist/js/eh-navbar.js")
+        script(src="../platform-wc/eh-footer/dist/js/eh-footer.js")
