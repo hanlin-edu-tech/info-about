@@ -23,7 +23,7 @@
     "url": "https://github.com/hanlin-edu-tech/info-about.git"
   },
   "devDependencies": {
-    "jquery": "3.3.1",
+    "jquery": "3.5.0",
     "gulp": "3.9.1",
     "gulp-param": "1.0.3",
     "gulp-rename": "1.4.0",
