@@ -189,5 +189,40 @@ img.banner {
     border: unset!important;
     box-shadow: unset!important;
     text-shadow: unset!important;
+    padding: 10px 40px !important;
+    font-size: 1.2em!important;
+  }
+}
+
+// 左側
+.menu{
+  background: #fff!important;
+  padding: 14px!important;
+  a{
+    color: #0D6CBE!important;
+    padding: 8px!important;
+    &::before{
+      display: none!important;
+    }
+  }
+}
+.menu a:hover, .menu a.select{
+  color: #0D6CBE!important;
+  border-radius: 5px;
+  background: #EDF7FF!important;
+}
+.menu a.select{
+  color: #fff!important;
+  background: #0D6CBE!important;
+}
+
+.menu li{
+  margin-bottom: 4px!important;
+  &:last-of-type{
+    margin-bottom: unset!important;
+  }
+  a{
+    width: 160px;
+    border: unset!important;
   }
 }
