@@ -34,7 +34,7 @@
     "path": "0.12.7",
     "browserify": "16.2.3",
     "coffeeify": "2.1.0",
-    "less": "3.9.0",
+    "less": "3.13.1",
     "pug": "2.0.3",
     "@google-cloud/storage": "2.4.3"
   },
