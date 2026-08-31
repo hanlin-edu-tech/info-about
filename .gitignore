@@ -9,3 +9,5 @@ src/*/css
 src/**/*.html
 src/*/lib
 dist
+tutor.json
+tutor-test.json
