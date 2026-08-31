@@ -1,7 +1,11 @@
 meta(name='Description', content='全台唯一提供完整教材並好用的中高線上課程，不限版本，24hr隨時上課。')
 meta(name='eHanlin - 翰林雲端學院', content='eHanlin - 翰林雲端學院 Smart Learning!')
 title 翰林雲端學院 - 線上學習首選 - 免費試用小中高課程
-link(rel='icon', href=`${platformUrl}/images/favicon.png`, type='image/png')
+//- 新版 CIS favicon；SVG 為主，PNG 供不支援 SVG favicon 的舊瀏覽器與 iOS 主畫面使用
+//- 改用專案自帶的圖檔（與其他 img 一樣走 ./${version}/img/），不再依賴主站的 /images/favicon.png
+link(rel='icon', href=`./${version}/img/favicon.svg`, type='image/svg+xml')
+link(rel='icon', href=`./${version}/img/favicon.png`, type='image/png')
+link(rel='apple-touch-icon', href=`./${version}/img/favicon.png`)
 script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js')
 // Google Tag Manager
 script.
