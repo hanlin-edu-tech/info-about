@@ -1,0 +1,36 @@
+# ⚠️ tag 條件刻意不用 `v\d+\.\d+\.\d+`。
+#
+# GitHub Actions 的 tags 過濾用的是 filter pattern（glob）不是正規表達式，
+# `\d` 只會被當成跳脫後的字母 d，那種寫法實際上只匹配得到名為 vd.d.d 的 tag，
+# 等於永遠不會觸發。這裡用官方文件有寫的語法：
+# v* 收全部、!v*-* 排除帶後綴的（如 -SNAPSHOT、-rc1）。
+
+name: production CD
+
+on:
+  push:
+    tags:
+        - 'v*'
+        - '!v*-*'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version:
+            - 20.x
+
+    steps:
+        - uses: actions/checkout@v3
+          with:
+              submodules: recursive
+        - name: Use Node.js ${{ matrix.node-version }}
+          uses: actions/setup-node@v3
+          with:
+              node-version: ${{ matrix.node-version }}
+        - run: echo -n '${{ secrets.GCS_TUTOR }}' > tutor.json
+        - run: npm install
+        - run: npm run uploadGcsProd

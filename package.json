@@ -23,25 +23,23 @@
     "url": "https://github.com/hanlin-edu-tech/info-about.git"
   },
   "devDependencies": {
+    "@google-cloud/storage": "^7.14.0",
+    "gulp": "^5.0.0",
     "jquery": "3.3.1",
-    "gulp": "3.9.1",
-    "gulp-param": "1.0.3",
-    "gulp-rename": "1.4.0",
-    "gulp-template-util": "0.0.2",
-    "event-stream": "3.3.4",
-    "del": "2.2.2",
-    "q": "1.5.0",
-    "path": "0.12.7",
-    "browserify": "16.2.3",
-    "coffeeify": "2.1.0",
-    "less": "3.9.0",
-    "pug": "2.0.3",
-    "@google-cloud/storage": "2.4.3"
+    "less": "^4.2.0",
+    "pug": "^3.0.3"
   },
   "dependencies": {
     "ehanlin-basicss": "0.0.5"
   },
   "scripts": {
-    "test": "gulp package --branch $TRAVIS_BRANCH"
+    "build": "gulp build",
+    "dev": "gulp dev",
+    "uploadGcsTest": "gulp uploadGcsTest --noindex",
+    "uploadGcsProd": "gulp uploadGcsProd",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "20.x"
   }
 }
