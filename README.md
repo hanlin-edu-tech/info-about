@@ -25,7 +25,7 @@ npm install
 npm run build
 ```
 
-需要 **Node 20**（`.nvmrc` 已指定 `v20.8.1`）。用 nvm 的話先 `nvm use`。
+需要 **Node 26**（`.nvmrc` 已指定 `v26.12.1`）。用 nvm 的話先 `nvm use`。
 `.npmrc` 開了 `engine-strict=true`，Node 版本不對會直接擋下 `npm install`，
 不會讓你裝到一半才發現。
 
