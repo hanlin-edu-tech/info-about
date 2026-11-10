@@ -1,3 +1,25 @@
+## 使用情況調查（2026-11-09）
+
+> 本節為 hanlin-edu-tech repo 清理作業的調查紀錄，待負責人確認後決定封存或刪除。
+
+- 調查結論：仍在使用
+- 建議處置：保留，理由：正式站「學院介紹」「師長推薦」頁內容與 2026-09-02 上傳的本 repo 產物相同，2026-08～09 有實質開發，網站共用頁尾與首頁連結本頁。
+- 最後更新：pushedAt 2026-10-28；最後 commit `8a1987c` 2026-10-28 hotdog929 Merge pull request #21 from hanlin-edu-tech/chore/upgrade-node-26
+- 用途：翰林雲端學院「學院介紹」與「師長推薦」靜態頁（pug／less，gulp 建置，`platform-wc` submodule 提供導覽列與頁尾），上傳到 GCS 的 `infos/about/`，正式站網址 `https://www.ehanlin.com.tw/infos/about/`、`/infos/about/recommend.html`。
+
+### 檢查結果
+
+| 檢查項目 | 結果 | 依據 |
+|---|---|---|
+| GitHub 活動 | 2026-08-31～2026-09-02 有實質 commit（更新 favicon、埋入 Google Ads 全站再行銷碼 [sc-121299]、`7d4898e` 2026-09-02 ehanlin 重寫建置與部署），由 ivy2846357 合併；2026-10-28 為「升級 Node.js 至 26」批次修改，不列為實質開發。分支 15 個（master、ryanDev 2025-02-25、test 2020-11-16、12 個 dependabot）；open PR 12 筆皆為 dependabot；issue 0；workflow：production CD、test CD（tag 觸發）、Dependabot Updates；production CD／test CD 查無執行紀錄；tag 5 個（最新 v2.0.2，2026-09-02）；release 0；非 fork | 已查核，細節記錄於內部調查報告 |
+| org 內程式碼引用 | 網站共用頁尾、首頁、sitemap 與平台程式連結本頁 | 已查核，細節記錄於內部調查報告（關鍵字：info-about、infos/about；命中 platform-wc、platform-index-view、tutor-sitemap、tutor-platform-root、platfom-root-bg 等） |
+| GCP 部署 | 正式與測試環境 GCS 檔案 2026-09-02 上傳，正式站頁面內容與 GCS 相同；查無 Cloud Build trigger、Cloud Run、GKE workload | 已查核，細節記錄於內部調查報告 |
+| AWS 部署 | 查無 | 已查核 4 個帳號的 Lambda、API Gateway（REST／HTTP）、ECR、ECS、EventBridge、SQS、S3、CloudFront 盤點，細節記錄於內部調查報告 |
+
+### 待確認事項
+- 2026-09-02 的 GCS 上傳不是由 GitHub Actions 執行（production CD／test CD 無任何執行紀錄），需負責人確認下次 tag 是否會正常觸發部署。
+- 殘留 webhook 1 個，細節記錄於內部調查報告。
+
 ![production CD](https://github.com/hanlin-edu-tech/info-about/workflows/production%20CD/badge.svg)
 ![test CD](https://github.com/hanlin-edu-tech/info-about/workflows/test%20CD/badge.svg)
 
